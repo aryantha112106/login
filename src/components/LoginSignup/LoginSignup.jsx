@@ -50,7 +50,9 @@ export const LoginSignup = () => {
     const handleLogin = () => {
         const savedUser = JSON.parse(localStorage.getItem("user"));
         if (savedUser && savedUser.email === loginData.email && savedUser.password === loginData.password) {
-            setMessage("Login successful!");
+            alert("Login successful!");
+          window.location.href = "https://rococo-fudge-8f2665.netlify.app/"
+
         } else {
             setMessage("Invalid email or password.");
         }
